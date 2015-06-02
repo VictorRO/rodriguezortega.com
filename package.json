@@ -1,0 +1,16 @@
+{
+  "name": "rodriguezortega",
+  "version": "1.0.0",
+  "description": "rodriguezortega.com web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/_VictorRO_/rodriguezortega.com.git"
+  },
+  "author": "Victor Rodriguez",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/_VictorRO_/rodriguezortega.com#readme"
+}
