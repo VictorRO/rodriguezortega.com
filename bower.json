@@ -1,0 +1,22 @@
+{
+  "name": "rodriguezortega.com",
+  "version": "1.0.0",
+  "authors": [
+    "Victor Rodriguez <victor@rodriguezortega.com>"
+  ],
+  "description": "rodriguezortega.com web site",
+  "main": "index.html",
+  "license": "MIT",
+  "homepage": "rodriguezortega.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-sass-official": "3.3.4",
+    "jquery": "2.1.4"
+  }
+}

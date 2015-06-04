@@ -1,8 +1,9 @@
 {
   "name": "rodriguezortega",
+  "private": true,
   "version": "1.0.0",
   "description": "rodriguezortega.com web site",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

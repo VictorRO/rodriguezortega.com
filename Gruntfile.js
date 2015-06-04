@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         src: [ 'build/**/*.css', '!build/style/<%= pkg.name %>.css' ]
       },
       scripts: {
-        src: [ 'build/**/*.js', '!build/js/<%= pkg.name %>.js' ]
+        src: [ 'build/**/*.js', '!build/js/<%= pkg.name %>.js', '!build/bower_components/*.js' ]
       }
     },
     sass: {
