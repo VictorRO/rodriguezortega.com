@@ -1,0 +1,23 @@
+@import 'src/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+
+body {
+  color: #333;
+}
+
+#main-nav {
+  font-family: 'PT Sans Narrow', sans-serif;
+  color: #5A757E;
+  background-color: #022B39; // url('assets/logo-nav.png') no-repeat center 5px;
+  height: 54px;
+  position: relative;
+
+  a {
+    color: #FFF;
+    text-decoration: none;
+    width: 200px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 22px;
+    padding-bottom: 16px;
+  }
+}

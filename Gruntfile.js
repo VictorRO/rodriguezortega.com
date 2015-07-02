@@ -14,13 +14,13 @@ module.exports = function(grunt) {
     },
     clean: {
       build: {
-        src: ['build']
+        src: [ 'build' ]
       },
       stylesheets: {
-        src: [ 'build/**/*.css', '!build/style/<%= pkg.name %>.css' ]
+        src: [ 'build/**/*.css', '!build/style/<%= pkg.name %>.css', '.sass-cache' ]
       },
       scripts: {
-        src: [ 'build/**/*.js', '!build/js/<%= pkg.name %>.js', '!build/bower_components/*.js' ]
+        src: [ 'build/**/*.js', '!build/js/<%= pkg.name %>.min.js', '!build/bower_components/**/*.js' ]
       }
     },
     sass: {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
     cssmin: {
       build: {
         files: {
-          'build/style/<%= pkg.name %>.css': ['build/**/*.css']
+          'build/style/<%= pkg.name %>.css': ['build/**/*.css', '!build/bower_components/**/*.css']
         }
       }
     },
@@ -63,14 +63,14 @@ module.exports = function(grunt) {
     },
     uglify: {
       options: {
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+        beautify: true
       },
       build: {
         src: 'build/js/*.js',
         dest: 'build/js/<%= pkg.name %>.min.js'
       }
     },
-
     jshint: {
       files: ['Gruntfile.js', 'src/**/*.js'],
       options: {
@@ -92,15 +92,6 @@ module.exports = function(grunt) {
         files: ['src/**', '!src/**/*.sass', '!src/**/*.coffee'],
         tasks: ['copy']
       }
-    },
-    connect: {
-      server: {
-        options: {
-          port: 4000,
-          base: 'build',
-          hostname: '*'
-        }
-      }
     }
   });
 
@@ -113,7 +104,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-contrib-connect');
 
   // Define the tasks
   grunt.registerTask(
@@ -135,6 +125,6 @@ module.exports = function(grunt) {
   );
 
   // Default task(s).
-  grunt.registerTask('default', ['build', 'connect', 'watch']);
+  grunt.registerTask('default', ['build', 'watch']);
 
 };
