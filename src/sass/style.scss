@@ -341,11 +341,33 @@ section > h1 {
   }
 
   .social {
-    text-align: center;
     margin-top: 5px;
+    float: right;
+    position: relative;
+    left: -50%;
+    text-align: left;
 
-    a {
-      margin-right: 15px;
+    ul {
+      padding: 0;
+      position: relative;
+      left: 50%;
+
+      li {
+        float: left;
+        position: relative;
+        display: inline-block;
+        float: left;
+        margin-right: 15px;
+      }
+    }
+
+    .sise-segona {
+      height: 32px;
+
+      img {
+        margin: 3px 0 0 0;
+        width: 34px;
+      }
     }
   }
 }
@@ -442,6 +464,15 @@ footer {
 
     .social {
       font-size: 30px;
+
+      .sise-segona {
+        height: 24px;
+        width: 26px;
+
+        img {
+          width: 26px;
+        }
+      }
     }
   }
 }
