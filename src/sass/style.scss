@@ -1,5 +1,5 @@
-@import 'src/bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
-@import 'src/bower_components/components-font-awesome/scss/font-awesome';
+@import '../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap';
+@import '../bower_components/components-font-awesome/scss/font-awesome';
 
 $primary-color: #022B39;
 $background-color: #FBFBFB;
@@ -136,7 +136,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
     font-size: 24px;
     line-height: 38px;
-    max-width: 400px;
+    max-width: 500px;
     margin: 0 auto;
   }
 
